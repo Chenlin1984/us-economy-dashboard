@@ -1,6 +1,7 @@
+flask
 yfinance
 fredapi
+scikit-learn
+matplotlib
 pandas
 numpy
-matplotlib
-scikit-learn
