@@ -3,10 +3,6 @@
 # =============================================
 # 每一個區段改寫成可重用函式，支援 Google Colab 終端顯示版本。
 
-# --- 安裝與引入套件 ---
-!pip install yfinance fredapi scikit-learn --quiet > log.txt
-!apt-get -y install fonts-noto-cjk > log.txt
-
 import yfinance as yf
 import pandas as pd
 import numpy as np
