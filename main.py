@@ -1,15 +1,6 @@
-from flask import Flask
-from dashboard import run_dashboard
-import os
+# main.py
+from dashboard import app
 
-
-app = Flask(__name__)
-
-@app.route("/")
-def home():
-    result = run_dashboard()
-    return result
-
-if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 10000))
-    app.run(host='0.0.0.0', port=port)
+# ✅ Render 會從這裡啟動 Web Service
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=int(__import__('os').environ.get("PORT", 10000)))
