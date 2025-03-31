@@ -216,10 +216,13 @@ def generate_summary(macro_data, score, allocation):
     for asset, ratio in allocation.items():
         print(f"   - {asset}: {ratio*100:.1f}%")
 
-def run_dashboard():
-    print("🇺🇸 美國景氣追蹤儀表板 (Render 版)")
-    macro_data = fetch_macro_data()
-    show_latest_values(macro_data)
-    analyze_liquidity(macro_data)
-    evaluate_economic_risk(macro_data)
+import os
+
+@app.route("/")
+def home():
+    run_dashboard()
     return "✅ 美國景氣追蹤儀表板已執行完成"
+
+if __name__ == '__main__':
+    port = int(os.environ.get("PORT", 10000))
+    app.run(host='0.0.0.0', port=port)
