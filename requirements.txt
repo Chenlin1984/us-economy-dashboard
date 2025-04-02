@@ -1,7 +1,7 @@
-yfinance
-fredapi
-scikit-learn
 flask
-matplotlib
-numpy
+yfinance
 pandas
+numpy
+fredapi
+requests
+beautifulsoup4
